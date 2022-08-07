@@ -1,0 +1,8 @@
+- name: Install docker
+  hosts: all
+  tasks:
+    - name: Install packages
+      become: true
+      apt:
+        name: [ "docker", "docker-compose", "docker.io" ]
+        update_cache: true

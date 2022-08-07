@@ -1,0 +1,10 @@
+{
+  "service_account_key_file": "{{ env `ACCT_KEY_FILE` }}",
+  "folder_id": "{{ env `FOLDER_ID` }}",
+  "source_image_family": "ubuntu-1604-lts",
+  "zone": "ru-central1-a",
+  "subnet_id": "{{ env `SUBNET_ID` }}",
+
+  "skip_create_image": "true",
+  "image_preemptible": "true"
+}

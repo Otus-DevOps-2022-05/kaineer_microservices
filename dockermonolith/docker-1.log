@@ -1,5 +1,0 @@
-REPOSITORY                                     TAG             IMAGE ID       CREATED          SIZE
-kaineer/not-ubuntu-tmp-file                    latest          a6291ef4e23e   29 seconds ago   124MB
-portainer/portainer-ce                         latest          ab836adaa325   8 days ago       278MB
-satantime/puppeteer-node                       latest          14058f41d2e1   2 weeks ago      1.12GB
-express42/otus-homeworks                       0.7.1           5b1974537ec5   2 years ago      1.02GB
