@@ -1,0 +1,6 @@
+# Custom cache for yc output
+.cache/
+
+# Terraform
+.terraform/
+.terraform.lock.hcl
