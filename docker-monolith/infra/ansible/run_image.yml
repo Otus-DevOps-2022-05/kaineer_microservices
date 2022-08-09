@@ -1,0 +1,10 @@
+- name: Run docker image
+  hosts: all
+  become: true
+  tasks:
+    - name: Run image from hub.docker.com
+      docker_container:
+        image: "kaineer/otus-reddit:1.0"
+        name: reddit
+        ports:
+          - 80:9292
