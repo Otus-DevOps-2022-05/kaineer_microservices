@@ -8,3 +8,7 @@ clean:
 	cd ui && make build && cd -
 run:
 	. ./scripts/run.sh
+run_env:
+	. ./scripts/run_env.sh
+kill:
+	. ./scripts/kill_all.sh
