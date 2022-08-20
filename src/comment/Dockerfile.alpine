@@ -13,7 +13,6 @@ WORKDIR $APP_HOME
 COPY VERSION *.rb config.ru Gemfile* $APP_HOME/
 
 RUN bundle update --bundler
-RUN bundle
 
 ENV COMMENT_DATABASE_HOST comment_db
 ENV COMMENT_DATABASE comments
