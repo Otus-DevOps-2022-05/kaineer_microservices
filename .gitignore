@@ -13,3 +13,6 @@
 
 # Docker compose
 .env
+!docker-compose.override.yml
+
+__pycache__
