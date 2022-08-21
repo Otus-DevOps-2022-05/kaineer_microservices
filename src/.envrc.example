@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Ничего секретного, вроде как
+
+export USERNAME=${USER}
+export UI_VERSION=2.0
+export POST_VERSION=latest
+export COMMENT_VERSION=latest
+
+export COMPOSE_PROJECT_NAME=wantedprefix
+
+export UI_PORT=3000

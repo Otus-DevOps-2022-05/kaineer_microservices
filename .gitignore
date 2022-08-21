@@ -1,8 +1,15 @@
 # Custom cache for yc output
 .cache/
 
+# Environment
+.envrc
+!*.example
+
 # Terraform
 .terraform/
 .terraform.lock.hcl
 *.tfstate
 *.tfstate.backup
+
+# Docker compose
+.env

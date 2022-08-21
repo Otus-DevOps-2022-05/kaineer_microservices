@@ -11,6 +11,9 @@ COMMENT_IMAGE="kaineer/comment:2.0"
 POST_IMAGE="kaineer/post:latest"
 UI_IMAGE="kaineer/ui:2.0"
 
+# volume был предварительно создан командой
+# docker volume create reddit_db
+
 docker run -d --network=reddit \
   --rm \
   --volume reddit_db:/data/db \
