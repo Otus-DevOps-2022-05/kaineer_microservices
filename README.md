@@ -91,6 +91,7 @@ MASQUERADE  tcp  --  10.0.1.2             10.0.1.2             tcp dpt:9292
  * Решил, что пока хватит
  * Зафйэлил сделать коммит правильно
  * Перекинул worklog в readme
+ * Исправил Dockerfile.alpine для ui, перестроил образы, теперь поднимается docker-compose.override.yml
 
 ### docker-3 [17]
 
