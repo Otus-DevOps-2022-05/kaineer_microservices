@@ -1,8 +1,19 @@
 # Custom cache for yc output
 .cache/
 
+# Environment
+.envrc
+!*.example
+
 # Terraform
 .terraform/
 .terraform.lock.hcl
 *.tfstate
 *.tfstate.backup
+
+# Docker compose
+.env
+!docker-compose.override.yml
+
+__pycache__
+debug.log
