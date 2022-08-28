@@ -22,7 +22,7 @@
         dest: /srv/gitlab/docker-compose.yml
 
     - name: Start docker compose
-      docker_container:
+      docker_compose:
         project_src: "/srv/gitlab"
         project_name: "gitlab-ci"
         state: present

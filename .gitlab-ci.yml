@@ -10,9 +10,6 @@ stages:
 variables:
   DATABASE_URL: 'mongodb://mongo/user_posts'
 
-before_script:
-  - cd reddit
-  - bundle
 
 build_job:
   stage: build
@@ -24,6 +21,8 @@ test_unit_job:
   services:
     - mongo:latest
   script:
+    - cd reddit
+    - bundle
     - ruby simpletest.rb
 
 test_integration_job:

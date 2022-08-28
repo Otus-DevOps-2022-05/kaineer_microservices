@@ -35,6 +35,3 @@
  * 5.7 Добавил раннер. ![Картинка](../gitlab-ci/assets/registered-runners.png)
  * Из всего, что успел поделать вынес мысль: лучше ставить VM со 100% готовностью, иначе ждать замучаешься
  * И, да, задачи "по желанию" по этой теме делать не буду.
-
-Ухты
-`obs:branch_review:environment config contains unknown keys: only, except`
