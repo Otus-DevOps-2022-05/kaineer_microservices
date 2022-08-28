@@ -1,0 +1,29 @@
+- name: Copy docker compose
+  hosts: all
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Create config directory
+      file:
+        state: directory
+        path: /srv/gitlab/config
+    - name: Create data directory
+      file:
+        state: directory
+        path: /srv/gitlab/data
+    - name: Create log directory
+      file:
+        state: directory
+        path: /srv/gitlab/logs
+
+    - name: Copy file
+      template:
+        src: ./files/docker-compose.yml.j2
+        dest: /srv/gitlab/docker-compose.yml
+
+    - name: Start docker compose
+      docker_container:
+        project_src: "/srv/gitlab"
+        project_name: "gitlab-ci"
+        state: present
+        restarted: true
