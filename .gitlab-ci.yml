@@ -22,7 +22,7 @@ test_unit_job:
     - mongo:latest
   script:
     - cd reddit
-    - bundle
+    - bundle install
     - ruby simpletest.rb
 
 test_integration_job:
