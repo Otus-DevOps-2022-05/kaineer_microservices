@@ -1,0 +1,23 @@
+# docker-compose.yml
+
+web:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+  hostname: 55.66.77.88
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://55.66.77.88'
+  ports:
+    - '80:80'
+    - '443:443'
+    - '2222:22'
+  volumes:
+    - '/srv/gitlab/config:/etc/gitlab'
+    - '/srv/gitlab/logs:/var/log/gitlab'
+    - '/srv/gitlab/data:/var/opt/gitlab'
+runner:
+  image: 'gitlab/gitlab-runner:latest'
+  restart: always
+  volumes:
+    - '/srv/gitlab-runner/config:/etc/gitlab-runner'
+    - '/var/run/docker.sock:/var/run/docker.sock'
