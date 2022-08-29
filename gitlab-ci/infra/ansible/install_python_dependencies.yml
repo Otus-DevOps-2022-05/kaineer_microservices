@@ -1,0 +1,23 @@
+- name: Install docker dependencies
+  hosts: all
+  tasks:
+    - name: Install python packages
+      become: true
+      apt:
+        name: [ "python3", "python3-pip", "python3-docker" ]
+        update_cache: true
+    - name: Install python docker
+      pip:
+        name: [ "docker" ]
+
+- name: Create directories for gitlab
+  hosts: all
+  tasks:
+    - name: Create directories
+      become: true
+      file:
+        state: directory
+        path:
+          - /srv/gitlab/config
+          - /srv/gitlab/data
+          - /srv/gitlab/logs
