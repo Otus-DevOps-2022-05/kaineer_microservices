@@ -1,13 +1,10 @@
 # post-py/Dockerfile
 
-FROM python:3.6.0
+FROM python:3.6.0-alpine
 
 # Looks like it will be everywhere
-# RUN apk add --no-cache build-base=0.4-r1 && \
-#   rm -rf /var/cache/apk/*
-RUN apt-get update -qq && \
-  apt-get install --no-install-recommends -y \
-  build-essential=11.7
+RUN apk add --no-cache build-base=0.4-r1 && \
+  rm -rf /var/cache/apk/*
 
 RUN pip install --no-cache --no-cache-dir pip==21.3.1
 

@@ -3,7 +3,7 @@ TAG=2.0
 IMAGE="kaineer/${NAME}"
 CONTAINER="${NAME}"
 
-FILE="Dockerfile.alpine"
+FILE="Dockerfile"
 
 build:
 	. ./docker_build.sh
