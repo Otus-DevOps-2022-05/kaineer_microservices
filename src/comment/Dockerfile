@@ -14,7 +14,7 @@ WORKDIR $APP_HOME
 COPY VERSION *.rb config.ru Gemfile* $APP_HOME/
 RUN bundle
 
-ENV COMMENT_DATABASE_HOST comment_db
+ENV COMMENT_DATABASE_HOST post_db
 ENV COMMENT_DATABASE comments
 
 CMD ["puma"]
