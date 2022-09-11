@@ -4,7 +4,7 @@ echo `git show --format="%h" HEAD | head -1` > build_info.txt
 echo `git rev-parse --abbrev-ref HEAD` >> build_info.txt
 
 if [ "$USER_NAME" = "travisuser" ]; then
-  docker build -t "$USER_NAME/post:logging" -f Dockefile.alpine .
+  docker build -t "$USER_NAME/post:logging" -f Dockefile .
 else
   echo " × Skip docker build, running from Makefile"
 fi
