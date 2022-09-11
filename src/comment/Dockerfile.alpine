@@ -1,8 +1,8 @@
 # comment/Dockerfile
 
-FROM ruby:2-alpine
+FROM ruby:2.2-alpine
 
-RUN apk add --no-cache build-base=0.5-r3 ruby-bundler=2.3.14-r1 && \
+RUN apk add --no-cache build-base=0.4-r1 ruby-bundler=1.12.5-r0 && \
   rm -rf /var/cache/apk/*
 
 ENV APP_HOME /app
@@ -10,7 +10,7 @@ ENV APP_HOME /app
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
-COPY VERSION *.rb config.ru Gemfile* $APP_HOME/
+COPY VERSION build_info.txt *.rb config.ru Gemfile* $APP_HOME/
 
 RUN bundle update --bundler
 

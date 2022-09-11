@@ -1,5 +1,5 @@
 NAME=ui
-TAG=2.0
+TAG=logging
 IMAGE="kaineer/${NAME}"
 CONTAINER="${NAME}"
 
@@ -11,6 +11,6 @@ build:
 clean:
 	docker rmi ${IMAGE}
 run:
-	docker run -d --rm --name ${CONTAINER} ${IMAGE}
+	docker run -d --rm --name ${CONTAINER} ${IMAGE}:${TAG}
 stop:
 	docker stop ${CONTAINER}

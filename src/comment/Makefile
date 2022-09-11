@@ -1,9 +1,9 @@
 NAME=comment
-TAG=2.0
+TAG=logging
 IMAGE="kaineer/${NAME}"
 CONTAINER="${NAME}"
 
-FILE="Dockerfile"
+FILE="Dockerfile.alpine"
 
 build:
 	. ./docker_build.sh
@@ -11,6 +11,6 @@ build:
 clean:
 	docker rmi ${IMAGE}
 run:
-	docker run -d --rm --name ${CONTAINER} ${IMAGE}
+	docker run -d --rm --name ${CONTAINER} "${IMAGE}:${TAG}"
 stop:
 	docker stop ${CONTAINER}
