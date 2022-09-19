@@ -5,6 +5,26 @@
 ## Курс «DevOps, практики и инструменты», часть 2, микросервисы.
 
 
+### kubernetes-1 [27]
+
+ * Поднял ноды через tf
+ * Создал *-deployment файлы, скопировал на первую ноду
+ * Установил kube{adm,let,ctl}
+   * Инструкции брал тут: https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+   * Заработало
+ * Дальше пошел ставить сетевой плагин
+   * Вот отсюда: https://projectcalico.docs.tigera.io/getting-started/kubernetes/self-managed-onprem/onpremises
+   * Заработало
+ * Скопировал по scp *-deployment.yml файлы
+ * Запустил все на исполнение через `kubectl apply -f <filename>`
+ * Посмотрел, поумилялся, все грохнул
+
+ * Запушил все что было в PR
+ * Посмотрел, чего просят проверки
+ * Поискал pdf-ку про "kubernetes the hard way"
+ * (оставил себе заметку на будущее поискать такой ресурс)
+ * Нагло сделал вид, будто у меня есть такие файлы (mkdir, touch, все дела)
+
 ### logging-1 [25]
 
  * Залез в репозиторий express42/reddit и посмотрел, сколько в нем веток
