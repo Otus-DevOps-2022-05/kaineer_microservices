@@ -77,7 +77,7 @@ kubernetes-dashboard-867758657b-qznkt        1/1     Running   0          71s
 
  * Создал новый namespace
  * Убил старые поды, поднял в `-n dev`, запустил дашбоард, поправил урл на `http://127.0.0.1:43999/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/#/workloads?namespace=dev` и посмотрел на поды в другом нэймспейсе.
- * Ну и, конечно, `minikube servie ui -n dev` открыл в браузере приложение в `dev`.
+ * Ну и, конечно, `minikube service ui -n dev` открыл в браузере приложение в `dev`.
 
 ### Продолжаем на yandex.cloud
 
