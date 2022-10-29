@@ -6,11 +6,19 @@ metadata:
     app: reddit
     component: ui
 spec:
-  type: NodePort
+  # --- [kubernetes-3.1]
+  type: LoadBalancer
   ports:
-    - port: 9292
+    - port: 80
+      nodePort: 32092
       protocol: TCP
       targetPort: 9292
+  # --- [kubernetes-2]
+  # type: NodePort
+  # ports:
+  #   - port: 9292
+  #     protocol: TCP
+  #     targetPort: 9292
   selector:
     app: reddit
     component: ui
