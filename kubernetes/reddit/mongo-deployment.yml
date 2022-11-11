@@ -1,4 +1,8 @@
 ---
+# THIS is a placeholder part
+# name: mongo-gce-pd-storage
+# persistentVolumeClaim:
+# --- end of placeholder
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -29,7 +33,7 @@ spec:
           volumeMounts:
             - name: mongo-persistent-storage
               mountPath: /data/db
-      volumes: 
+      volumes:
         - name: mongo-persistent-storage
           emptyDir: {}
 
