@@ -1,0 +1,14 @@
+#
+comment:
+  image:
+    repository: kaineer/comment
+    tag: "2.0"
+  service:
+    externalPort: 9292
+
+post:
+  image:
+    repository: kaineer/post
+    tag: latest
+  service:
+    externalPort: 5000
